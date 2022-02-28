@@ -18,6 +18,14 @@ const userSchema = new mongoose.Schema({
     required: false,
     default: [],
   },
+  phone_number: {
+    type: Number,
+    required: true,
+  },
+  join_date: {
+    type: String,
+    default: Date.now,
+  },
 });
 
 module.exports = mongoose.model("User", userSchema);

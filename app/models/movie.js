@@ -14,7 +14,15 @@ const movieSchema = new mongoose.Schema({
     required: true,
   },
   img: {
-    type: Object,
+    type: String,
+    required: true,
+  },
+  description: {
+    type: String,
+    required: true,
+  },
+  created_by: {
+    type: String,
     required: true,
   },
 });

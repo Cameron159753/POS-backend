@@ -17,15 +17,28 @@ Content-Type: application/json
     "name": "The Mummy",
     "price": 95.00,
     "category": "Horror",
-    "img": "https://i.postimg.cc/x8qMCxDs/the-conjuring.jpg"
-}
+    "img": "https://i.postimg.cc/x8qMCxDs/the-conjuring.jpg",
+    "description": "sgdhcshdch",
+    "created_by": ""
 
+}
 
 
 ###
 
 
-DELETE http://localhost:3200/movies/
+PATCH http://localhost:3200/movies
+Content-Type: application/json
+
+{
+
+}
+
+
+###
+
+
+DELETE http://localhost:3200/movies
 ###
 
 # movies end
@@ -36,7 +49,7 @@ GET http://localhost:3200/user
 ###
 
 
-POST https://localhost:3200/user/signin
+POST http://localhost:3200/user/signin
 Content-Type: application/json
 
 {
@@ -55,11 +68,24 @@ Content-Type: application/json
     
     "fullname": "kyle mcbby",
     "password": "kyliej1",
-    "email": "kkmwah@gmail.com"
+    "email": "kkmwah@gmail.com",
+    "phone_number": "0214223478"
+    
+
 }
 
 
 ###
 
 
-DELETE http://localhost:3200/user/621cb4997c65b1c81f10d177
+PATCH http://localhost:3200/user
+Content-Type: application/json
+
+{
+
+}
+
+
+###
+
+DELETE http://localhost:3200/user

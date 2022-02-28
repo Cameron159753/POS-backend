@@ -53,13 +53,9 @@ router.post("/signin", async (req, res) => {
           message: "Invalid Password!",
         });
       }
-      let token = jwt.sign(
-        { id: customer.id },
-        process.env.ACCESS_TOKEN_SECRET,
-        {
-          expiresIn: 86400, // 24 hours
-        }
-      );
+      let token = jwt.sign({ id: user.id }, process.env.ACCESS_TOKEN_SECRET, {
+        expiresIn: 86400, // 24 hours
+      });
       res.status(200).send({
         id: user.id,
         fullname: user.fullname,
@@ -83,6 +79,12 @@ router.patch("/:id", [getUser, verifyToken], async (req, res) => {
   }
   if (req.body.password != null) {
     res.user.password = req.body.password;
+  }
+  if (req.body.phone_number != null) {
+    res.user.phone_number = req.body.phone_number;
+  }
+  if (req.body.join_date != null) {
+    res.user.join_date = req.body.join_date;
   }
   try {
     const updatedUser = await res.user.save();
