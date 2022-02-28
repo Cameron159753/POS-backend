@@ -22,6 +22,7 @@ router.post("/", async (req, res) => {
     price: req.body.price,
     category: req.body.category,
     img: req.body.img,
+    description: req.body.img,
   });
   try {
     const newMovie = await movie.save();
@@ -41,8 +42,12 @@ router.patch("/:id", getMovie, async (req, res) => {
   if (req.body.category != null) {
     res.movie.category = req.body.category;
   }
-  if (req.body.category != null) {
+  if (req.body.img != null) {
     res.movie.img = req.body.img;
+  }
+
+  if (req.body.description != null) {
+    res.movie.description = req.body.description;
   }
   try {
     const updatedMovie = await res.movie.save();
