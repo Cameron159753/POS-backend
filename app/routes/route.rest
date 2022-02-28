@@ -25,22 +25,10 @@ Content-Type: application/json
 ###
 
 
-DELETE http://localhost:3000/movies/62161eb3c0fd4cab44a3b1e6
+DELETE http://localhost:3200/movies/
 ###
 
-
-
-POST https://localhost:3200/user/signin
-Content-Type: application/json
-
-{
-    "fullname": "cameron bowers",
-    "password": "cammyb123"
-}
-
-
-###
-
+# movies end
 
 
 GET http://localhost:3200/user
@@ -48,13 +36,30 @@ GET http://localhost:3200/user
 ###
 
 
-POST http://localhost:3005/user/signup
+POST https://localhost:3200/user/signin
 Content-Type: application/json
 
 {
-    "fullname": "haniah jardien",
-    "password": "hj59@3.2",
-    "email": "hanijar@gmail.com"
+    "fullname": "kyle mcbby",
+    "password": "kyliej1"
 }
 
 
+###
+
+
+POST http://localhost:3200/user/signup
+Content-Type: application/json
+
+{
+    
+    "fullname": "kyle mcbby",
+    "password": "kyliej1",
+    "email": "kkmwah@gmail.com"
+}
+
+
+###
+
+
+DELETE http://localhost:3200/user/621cb4997c65b1c81f10d177
