@@ -4,13 +4,13 @@ GET https://localhost:3200/movies
 ###
 
 
-GET https://pos-backend11.herokuapp.com/movies
+GET https://movies-posbackend.herokuapp.com/movies
 
 
 ###
 
 
-POST https://pos-backend11.herokuapp.com/movies 
+POST https://movies-posbackend.herokuapp.com/movies 
 Content-Type: application/json
 
 {
