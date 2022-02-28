@@ -1,0 +1,59 @@
+GET https://pos-backend11.herokuapp.com/movies
+
+
+###
+
+
+GET https://pos-backend11.herokuapp.com/movies
+
+
+###
+
+
+POST https://pos-backend11.herokuapp.com/movies 
+Content-Type: application/json
+
+{
+    "name": "The Mummy",
+    "price": 95.00,
+    "category": "Horror",
+    "img": "https://i.postimg.cc/x8qMCxDs/the-conjuring.jpg"
+}
+
+
+
+###
+
+
+DELETE http://localhost:3000/movies/62161eb3c0fd4cab44a3b1e6
+###
+
+
+
+PATCH https://pos-backend11.herokuapp.com/users
+Content-Type: application/json
+
+{
+    "name":"amazing girl"
+}
+
+
+###
+
+
+
+GET http://localhost:3001/users
+
+###
+
+
+POST http://localhost:3001/users/signup
+Content-Type: application/json
+
+{
+    "fullname": "haniah jardien",
+    "password": "hj59@3.2",
+    "email": "hanijar@gmail.com",
+}
+
+
