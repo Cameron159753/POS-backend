@@ -3,7 +3,7 @@ const router = express.Router();
 const User = require("../models/users");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const verifyToken = require("../middleware/auth.jwt");
+const verifyToken = require("../middleware/authJwt");
 
 router.get("/", async (req, res) => {
   try {

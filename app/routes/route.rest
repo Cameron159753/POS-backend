@@ -1,4 +1,4 @@
-GET https://pos-backend11.herokuapp.com/movies
+GET https://localhost:3200/movies
 
 
 ###
@@ -30,11 +30,12 @@ DELETE http://localhost:3000/movies/62161eb3c0fd4cab44a3b1e6
 
 
 
-PATCH https://pos-backend11.herokuapp.com/users
+POST https://localhost:3200/user/signin
 Content-Type: application/json
 
 {
-    "name":"amazing girl"
+    "fullname": "cameron bowers",
+    "password": "cammyb123"
 }
 
 
@@ -42,18 +43,18 @@ Content-Type: application/json
 
 
 
-GET http://localhost:3001/users
+GET http://localhost:3200/user
 
 ###
 
 
-POST http://localhost:3001/users/signup
+POST http://localhost:3005/user/signup
 Content-Type: application/json
 
 {
     "fullname": "haniah jardien",
     "password": "hj59@3.2",
-    "email": "hanijar@gmail.com",
+    "email": "hanijar@gmail.com"
 }
 
 
