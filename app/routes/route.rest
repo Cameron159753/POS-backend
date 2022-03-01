@@ -1,4 +1,4 @@
-GET https://localhost:3200/movies
+GET https://localhost:3300/movies
 
 
 ###
@@ -27,7 +27,7 @@ Content-Type: application/json
 ###
 
 
-PATCH http://localhost:3200/movies
+PATCH http://localhost:3300/movies
 Content-Type: application/json
 
 {
@@ -38,18 +38,18 @@ Content-Type: application/json
 ###
 
 
-DELETE http://localhost:3200/movies
+DELETE http://localhost:3300/movies
 ###
 
 # movies end
 
 
-GET http://localhost:3200/user
+GET http://localhost:3300/user
 
 ###
 
 
-POST http://localhost:3200/user/signin
+POST http://localhost:3300/user/signin
 Content-Type: application/json
 
 {
@@ -61,7 +61,7 @@ Content-Type: application/json
 ###
 
 
-POST http://localhost:3200/user/signup
+POST http://localhost:3300/user/signup
 Content-Type: application/json
 
 {
@@ -78,7 +78,7 @@ Content-Type: application/json
 ###
 
 
-PATCH http://localhost:3200/user
+PATCH http://localhost:3300/user
 Content-Type: application/json
 
 {
@@ -88,4 +88,4 @@ Content-Type: application/json
 
 ###
 
-DELETE http://localhost:3200/user
+DELETE http://localhost:3300/user
