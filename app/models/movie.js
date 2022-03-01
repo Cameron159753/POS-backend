@@ -21,10 +21,6 @@ const movieSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  created_by: {
-    type: String,
-    required: true,
-  },
 });
 
 module.exports = mongoose.model("Movie", movieSchema);

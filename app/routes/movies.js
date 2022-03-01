@@ -49,6 +49,7 @@ router.patch("/:id", getMovie, async (req, res) => {
   if (req.body.description != null) {
     res.movie.description = req.body.description;
   }
+
   try {
     const updatedMovie = await res.movie.save();
     res.json(updatedMovie);

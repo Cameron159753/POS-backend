@@ -1,4 +1,4 @@
-// require("dotenv").config();
+require("dotenv").config();
 
 const express = require("express");
 const app = express();
@@ -14,8 +14,10 @@ app.use(express.json());
 app.use(cors());
 const moviesRouter = require("./app/routes/movies");
 app.use("/movies", moviesRouter);
-
 const userRouter = require("./app/routes/user");
 app.use("/user", userRouter);
 
-app.listen(process.env.PORT || 3400, () => console.log("Server Started"));
+const cartRouter = require("./app/routes/cart");
+app.use("/cart", cartRouter);
+
+app.listen(process.env.PORT || 3700, () => console.log("Server Started"));

@@ -26,6 +26,7 @@ router.post("/signup", DuplicatedUsernameorEmail, async (req, res, next) => {
       fullname: req.body.fullname,
       email: req.body.email,
       password: hashedPassword,
+      phone_number: req.body.phone_number,
     });
     const newUser = await user.save();
     res.status(201).json(newUser);
@@ -53,13 +54,15 @@ router.post("/signin", async (req, res) => {
           message: "Invalid Password!",
         });
       }
-      let token = jwt.sign({ id: user.id }, process.env.ACCESS_TOKEN_SECRET, {
+      let token = jwt.sign({ id: user._id }, process.env.ACCESS_TOKEN_SECRET, {
         expiresIn: 86400, // 24 hours
       });
       res.status(200).send({
-        id: user.id,
+        id: user._id,
         fullname: user.fullname,
         email: user.email,
+        password: user.password,
+        phone_number: user.phone_number,
         accessToken: token,
       });
     });
