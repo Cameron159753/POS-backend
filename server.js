@@ -18,4 +18,4 @@ app.use("/movies", moviesRouter);
 const userRouter = require("./app/routes/user");
 app.use("/user", userRouter);
 
-app.listen(process.env.PORT || 3200, () => console.log("Server Started"));
+app.listen(process.env.PORT || 3400, () => console.log("Server Started"));
