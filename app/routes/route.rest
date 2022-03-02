@@ -3,9 +3,7 @@ GET http://localhost:3700/movies
 
 ###
 
-
-GET https://movies-posbackend.herokuapp.com/movies
-
+GET https://movies-posbackend.herokuapp.com/user
 
 ###
 
@@ -44,8 +42,7 @@ DELETE http://localhost:3700/movies
 
 # movies end
 
-
-GET http://localhost:3700/user
+GET http://localhost:3700/user/621f24856fe0ed8ffceed8a8
 
 ###
 
@@ -54,8 +51,8 @@ POST http://localhost:3700/user/signin
 Content-Type: application/json
 
 {
-    "fullname": "kyle mcbby",
-    "password": "kyliej1"
+    "fullname": "hello kitty",
+    "password": "japan"
 }
 
 
@@ -67,10 +64,10 @@ Content-Type: application/json
 
 {
     
-    "fullname": "kyle dumb dumn",
-    "password": "kyle1",
-    "email": "mwah@gmail.com",
-    "phone_number": "0214223477"
+    "fullname": "phone",
+    "password": "case",
+    "email": "iphone@gmail.com",
+    "phone_number": "0259253477"
     
 
 }
@@ -98,24 +95,19 @@ DELETE http://localhost:3700/user
 
 ###
 
+
 GET http://localhost:3700/cart
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWNjMWIwNDFjOTgwMGY5NTk1Zjg5YSIsImlhdCI6MTY0NjEzNzU1NywiZXhwIjoxNjQ2MjIzOTU3fQ.gYfRv8SPvTE85mk0CWN-MRhAu8mSs6TV2Y1iwvWxUMM
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWYyYTVmYTQ4MGI1MjA2NDc5ZDBkOCIsImlhdCI6MTY0NjIyMjU3NiwiZXhwIjoxNjQ2MzA4OTc2fQ.9WQPgfnOOlWloVellvfEKwrk57RHNAXGwuZuzJ2brlU
 
 ###
 
-
-POST http://localhost:3700/cart
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWNjMWIwNDFjOTgwMGY5NTk1Zjg5YSIsImlhdCI6MTY0NjE0MjAyNSwiZXhwIjoxNjQ2MjI4NDI1fQ.CJaX3_EJJV0wLHoLcD1swpWBSOtq1bq2KawQDN_xMrM
-
-
-
+POST http://localhost:3700/cart/621629723d5c4a0acde78b18
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWYyYTVmYTQ4MGI1MjA2NDc5ZDBkOCIsImlhdCI6MTY0NjIyMjU3NiwiZXhwIjoxNjQ2MzA4OTc2fQ.9WQPgfnOOlWloVellvfEKwrk57RHNAXGwuZuzJ2brlU
 ###
 
 
 
-DELETE http://localhost:3700/cart
-Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWNjMWIwNDFjOTgwMGY5NTk1Zjg5YSIsImlhdCI6MTY0NjEyODgyMSwiZXhwIjoxNjQ2MjE1MjIxfQ.lakktzDol87Z9j7ncIxZx0K7AUGvuuDNxUlQdw2hx0g
-
+DELETE http://localhost:3700/cart/621629723d5c4a0acde78b18
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWYyYTVmYTQ4MGI1MjA2NDc5ZDBkOCIsImlhdCI6MTY0NjIyMjU3NiwiZXhwIjoxNjQ2MzA4OTc2fQ.9WQPgfnOOlWloVellvfEKwrk57RHNAXGwuZuzJ2brlU
 
 ###

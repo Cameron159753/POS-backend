@@ -9,10 +9,11 @@ const Movie = require("../models/movie");
 router.get("/", [verifyToken, getUser], (req, res) => {
   return res.send(res.user.cart);
 });
+
 router.post("/:id", [verifyToken, getUser], async (req, res) => {
   let movie = await Movie.findById(req.params.id).lean();
   let qty = req.body.qty;
-  let cart = req.cart;
+  let cart = res.user.cart;
   let added = false;
   cart.forEach((item) => {
     if (item._id.valueOf() == movie._id.valueOf()) {
@@ -55,18 +56,18 @@ router.put("/:id", [verifyToken, getMovie], async (req, res) => {
     updatedUser = await user.save;
   }
   try {
-    const acces_token = jwt.sign(
+    const ACCESS_TOKEN_SECRET = jwt.sign(
       JSON.stringify(updatedUser),
       process.env.ACCESS_TOKEN_SECRET
     );
-    res.status(201).json({ jwt: acces_token, cart: updatedUser.cart });
+    res.status(201).json({ jwt: ACCESS_TOKEN_SECRET, cart: updatedUser.cart });
   } catch (error) {
     res.status(500).json({ message: error.message });
   }
 });
 
 router.delete("/:id", [verifyToken, getUser], async (req, res) => {
-  let cart = req.cart;
+  let cart = res.user.cart;
   cart.forEach((cartitem) => {
     if (cartitem._id == req.params.id) {
       cart = cart.filter((cartitems) => cartitems._id != req.params.id);
